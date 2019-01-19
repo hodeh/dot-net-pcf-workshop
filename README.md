@@ -67,16 +67,10 @@ In the next sections we are going to deploy a ASP.NET  MVC application and a web
 
 ## <a name="lab1"></a> Lab 1 - Deploy a ASP.NET MVC app
 We have created an application was created using the out of the box ASP.NET MVC template with Web API. We have customized the html layout of the generated app.
-This application is under `skeleton/FlightAvailability` folder.
+Locate the Web.config file, should be under `dot-net-pcf-workshop/skeleton/FlightAvailability/FlightAvailability`
 
-We open the project in Visual Studio and run it locally to see that it works.
-
-We are now ready to deploy this simple application to PCF. We follow these steps:
-1. Ensure project is built (on Windows): > Build menu > Publish option > Select publish to folder
-2. Go to the publish folder
-3. Deploy app to PCF:
-
-  `cf push FlightAvailability -s windows2012R2 -b hwc_buildpack`
+run the following command
+  `cf push FlightAvailability -s windows2016 -b hwc_buildpack .`
 
 Once the application has successfully deployed, PCF shows us in the console the following information:
 ```
